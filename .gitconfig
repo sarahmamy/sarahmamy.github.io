@@ -1,0 +1,9 @@
+[alias]
+       st = status
+       co = checkout
+       ci = commit
+       br = branch
+       lg  = log -M --decorate --graph --oneline
+[user]
+    email = mamysrh@gmail.com
+    name = Sarah
