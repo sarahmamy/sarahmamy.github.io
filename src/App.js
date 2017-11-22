@@ -57,6 +57,18 @@ class App extends Component {
           <a href='https://geoponts.enpc.fr'>
             <img className='w-full h120 h360-mm' alt='geoponts' style={{objectFit: 'cover'}} src={geoponts} />
           </a>
+
+          <h2 className='pt36'>
+            Hobbies
+          </h2>
+          <p className='py12'>
+            I love going to art exhibits or watching movies.
+            <br />
+            When I am not at my desk, I am usually climbing or having a beer with friends.
+            <br />
+            I welcome bribes in the form of{' '}
+            <span><img draggable="false" className="h24 w24 emoji" alt="🍍" src="https://twemoji.maxcdn.com/2/72x72/1f34d.png" /></span>.
+          </p>
         </div>
       </div>
     );
