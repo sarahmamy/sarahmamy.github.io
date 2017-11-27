@@ -37,7 +37,7 @@ class App extends Component {
           </h3>
           <p className='pt12'>
             A story-telling hiking blog centered around trail maps and photos.
-            With Benjamin TD, we designed and developed the website from scratch.
+            With Benjamin TD, we designed and developed the website from scratch in one month during our spare time.
           </p>
           <p className='py12'>
             I am pretty proud of the lamp animation{' '}
