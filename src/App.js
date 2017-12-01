@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import Cinema from './components/cinema'
 import githubIcon from './assets/github.svg';
 import instaIcon from './assets/instagram.svg';
 import linkedinIcon from './assets/linkedin.svg';
@@ -67,8 +68,86 @@ class App extends Component {
             When I am not at my desk, I am usually climbing or having a beer with friends.
             <br />
             I welcome bribes in the form of{' '}
-            <span><img draggable="false" className="h24 w24 emoji" alt="🍍" src="https://twemoji.maxcdn.com/2/72x72/1f34d.png" /></span>.
+            <span><img draggable="false" className="h24 w24 emoji" alt="🍍" src="https://apps.timwhitlock.info/static/images/emoji/emoji-apple/1f34d.png" /></span>.
           </p>
+          <h3 className='pt24'>Cinema</h3>
+          <p className='py12'>
+            Here is a list of movies I love.
+          </p>
+          <div className='txt-ul'>
+              <Cinema
+                  title='Mommy'
+                  director='Xavier Dolan'
+                  image1Url='https://apps.timwhitlock.info/static/images/emoji/emoji-apple/1f341.png'
+                  image1Alt='maple'
+                  image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/family-woman-boy_1f469-200d-1f466.png'
+                  image2Alt='mother and son'
+              ></Cinema>
+              <Cinema
+                  title='There Will Be Blood'
+                  director='Paul Thomas Anderson'
+                  image1Url='https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/syringe_1f489.png'
+                  image1Alt='blood'
+                  image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/fuel-pump_26fd.png'
+                  image2Alt='fuel'
+              ></Cinema>
+              <Cinema
+                  title='A Separation'
+                  director='Asghar Farhadi'
+                  image1Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/flag-for-iran_1f1ee-1f1f7.png'
+                  image1Alt='Iran'
+                  image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/broken-heart_1f494.png'
+                  image2Alt='separation'
+              ></Cinema>
+              <Cinema
+                  title='Jackie Brown'
+                  director='Quentin Tarantino'
+                  image1Url='https://emojipedia-us.s3.amazonaws.com/thumbs/120/samsung/100/pistol_1f52b.png'
+                  image1Alt='gun'
+                  image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/female-office-worker-type-6_1f469-1f3ff-200d-1f4bc.png'
+                  image2Alt='Jackie'
+              ></Cinema>
+              <Cinema
+                  title='L’Esquive'
+                  director='Wes Anderson'
+                  image1Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/couple-with-heart_1f491.png'
+                  image1Alt='couple love'
+                  image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/performing-arts_1f3ad.png'
+                  image2Alt='theatre'
+              ></Cinema>
+              <Cinema
+                  title='The Grand Budapest Hotel'
+                  director='Wes Anderson'
+                  image1Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/hotel_1f3e8.png'
+                  image1Alt='hotel'
+                  image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/man-in-tuxedo_emoji-modifier-fitzpatrick-type-1-2_1f935-1f3fb_1f3fb.png'
+                  image2Alt='groom'
+              ></Cinema>
+              <Cinema
+                  title='La Mala Educación'
+                  director='Pedro Almodóvar'
+                  image1Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/two-men-holding-hands_1f46c.png'
+                  image1Alt='couple'
+                  image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/flag-for-spain_1f1ea-1f1f8.png'
+                  image2Alt='Spain'
+              ></Cinema>
+              <Cinema
+                  title='Be Kind Rewind'
+                  director='Michel Gondry'
+                  image1Url='https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/videocassette_1f4fc.png'
+                  image1Alt='videocassette'
+                  image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/film-projector_1f4fd.png'
+                  image2Alt='cinema'
+              ></Cinema>
+              <Cinema
+                  title='De Battre Mon Coeur S’est Arrêté'
+                  director='Michel Audiard'
+                  image1Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/man_emoji-modifier-fitzpatrick-type-1-2_1f468-1f3fb_1f3fb.png'
+                  image1Alt='Romain Duris'
+                  image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/musical-keyboard_1f3b9.png'
+                  image2Alt='piano'
+              ></Cinema>
+          </div>
         </div>
       </div>
     );
