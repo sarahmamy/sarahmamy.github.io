@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import './index.css';
 import Cinema from './components/cinema'
+import RoleModel from './components/role-model'
 import githubIcon from './assets/github.svg';
 import instaIcon from './assets/instagram.svg';
 import linkedinIcon from './assets/linkedin.svg';
 import emailIcon from './assets/email.svg';
 import escapades from './assets/escapades-screenshot.png';
 import geoponts from './assets/geoponts-screenshot.png';
+import rebecca from './assets/img/rebecca.png';
+import shainblum from './assets/img/shainblum.png';
+import saporito from './assets/img/saporito.png';
 
 
 
@@ -24,13 +28,13 @@ class App extends Component {
             <br />
             I am a Product Manager based in Paris.
           </p>
-          <div className='py12'>
+          <div className='pt12'>
             <a href='mailto:mamysrh@gmail.com'><img className='h24 w24 mr6' alt='email' draggable={false} src={emailIcon} /></a>
             <a href='https://linkedin.com/in/sarahmamy'><img className='h24 w24 mr6' alt='linkedin' draggable={false} src={linkedinIcon} /></a>
             <a href='https://github.com/sarahmamy'><img className='h24 w24 mr6' alt='github' draggable={false} src={githubIcon} /></a>
             <a href='https://instagram.com/sarah_mamy'><img className='h24 w24 mr6' alt='instagram' draggable={false} src={instaIcon} /></a>
           </div>
-          <h2 className='pt36'>
+          <h2 className='pt60'>
             Projects
           </h2>
           <h3 className='pt24'>
@@ -59,7 +63,7 @@ class App extends Component {
             <img className='w-full h120 h360-mm' alt='geoponts' style={{objectFit: 'cover'}} src={geoponts} />
           </a>
 
-          <h2 className='pt36'>
+          <h2 className='pt60'>
             Hobbies
           </h2>
           <p className='py12'>
@@ -109,7 +113,7 @@ class App extends Component {
               ></Cinema>
               <Cinema
                   title='L’Esquive'
-                  director='Wes Anderson'
+                  director='Abdellatif Kechiche'
                   image1Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/couple-with-heart_1f491.png'
                   image1Alt='couple love'
                   image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/performing-arts_1f3ad.png'
@@ -147,6 +151,32 @@ class App extends Component {
                   image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/musical-keyboard_1f3b9.png'
                   image2Alt='piano'
               ></Cinema>
+          </div>
+          <h2 className='pt60'>
+            People I admire
+          </h2>
+          <p className='py12'>
+            Be thankful.
+          </p>
+          <div class='pt12'>
+            <RoleModel
+              name='Nick Saporito'
+              comment='His design tutorials are the best Ive ever followed.'
+              url='https://logosbynick.com/'
+              imageUrl={saporito}
+            ></RoleModel>
+            <RoleModel
+              name='Rebecca Manzoni'
+              comment='Her short capsules on music are fun, full of anecdotes and enlightening (in French).'
+              url='https://www.franceinter.fr/emissions/pop-co'
+              imageUrl={rebecca}
+            ></RoleModel>
+            <RoleModel
+              name='Michael Shainblum'
+              comment='A guy whose photos are breathtaking and exotic.'
+              url='http://www.shainblumphoto.com/'
+              imageUrl={shainblum}
+            ></RoleModel>
           </div>
         </div>
       </div>
