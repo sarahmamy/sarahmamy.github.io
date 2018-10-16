@@ -31,6 +31,10 @@ a:hover {
   color: #78c1ce;
 }
 
+.bg-gradient {
+  background: linear-gradient(to right, #080d47, #3b92a1);
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
