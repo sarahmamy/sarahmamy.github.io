@@ -9,7 +9,7 @@ const Cinema = ({ title, director, image1Url, image2Url, image1Alt, image2Alt}) 
         <span>
             <img draggable="false" className="h24 w24 emoji mr6" alt={image2Alt} src={image2Url} />
         </span>
-        {title} - <span className='color-darken50'>{director}</span>
+        {title} - <span className='color-gray'>{director}</span>
     </div>
 )
 
