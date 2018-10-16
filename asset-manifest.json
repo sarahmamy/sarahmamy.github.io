@@ -1,12 +1,15 @@
 {
-  "main.css": "static/css/main.15d1f139.css",
-  "main.css.map": "static/css/main.15d1f139.css.map",
-  "main.js": "static/js/main.acccc272.js",
-  "main.js.map": "static/js/main.acccc272.js.map",
-  "static\\media\\email.svg": "static/media/email.c99c7759.svg",
-  "static\\media\\escapades-screenshot.png": "static/media/escapades-screenshot.ed2243b1.png",
-  "static\\media\\geoponts-screenshot.png": "static/media/geoponts-screenshot.2635a663.png",
-  "static\\media\\github.svg": "static/media/github.1662b84f.svg",
-  "static\\media\\instagram.svg": "static/media/instagram.c4ffd304.svg",
-  "static\\media\\linkedin.svg": "static/media/linkedin.2e3b159a.svg"
+  "main.css": "static/css/main.3f1ced80.css",
+  "main.css.map": "static/css/main.3f1ced80.css.map",
+  "main.js": "static/js/main.53b5b3fe.js",
+  "main.js.map": "static/js/main.53b5b3fe.js.map",
+  "static/media/email.svg": "static/media/email.79c10162.svg",
+  "static/media/escapades-screenshot.png": "static/media/escapades-screenshot.ed2243b1.png",
+  "static/media/geoponts-screenshot.png": "static/media/geoponts-screenshot.2635a663.png",
+  "static/media/github.svg": "static/media/github.39b55b73.svg",
+  "static/media/instagram.svg": "static/media/instagram.c89f67f2.svg",
+  "static/media/linkedin.svg": "static/media/linkedin.2553d06a.svg",
+  "static/media/rebecca.png": "static/media/rebecca.12844f54.png",
+  "static/media/saporito.png": "static/media/saporito.b19d1ec7.png",
+  "static/media/shainblum.png": "static/media/shainblum.3eab87d6.png"
 }
