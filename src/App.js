@@ -29,7 +29,7 @@ class App extends Component {
             <br />
             I am a Product Manager based in Paris.
           </p>
-          <div className='pt12'>
+          <div className='pt18'>
             <a href='mailto:mamysrh@gmail.com'><img className='h24 w24 mr6' alt='email' draggable={false} src={emailIcon} /></a>
             <a href='https://linkedin.com/in/sarahmamy'><img className='h24 w24 mr6' alt='linkedin' draggable={false} src={linkedinIcon} /></a>
             <a href='https://github.com/sarahmamy'><img className='h24 w24 mr6' alt='github' draggable={false} src={githubIcon} /></a>
@@ -199,6 +199,9 @@ class App extends Component {
               imageUrl={shainblum}
             ></RoleModel>
           </div>
+          <a className='color-darken50 txt-em' href='mailto:mamysrh@gmail.com'>
+            <span className='sm'>Psst, feedback is welcome!</span>
+          </a>
         </div>
       </div>
     );

@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans', sans-serif;
+  font-size: 17px;
   background: linear-gradient(to right, #080d47, #3b92a1);
 }
 
@@ -13,13 +14,13 @@ h1 {
 
 h2 {
   font-family: GlacialIndifferenceBold;
-  font-size: 30px;
+  font-size: 36px;
   color: #080d47;
 }
 
 h3 {
   font-family: GlacialIndifference;
-  font-size: 20px;
+  font-size: 24px;
   color: #3b92a1;
 }
 
@@ -33,6 +34,10 @@ a:hover {
 
 .bg-gradient {
   background: linear-gradient(to right, #080d47, #3b92a1);
+}
+
+.sm {
+  font-size: 14px;
 }
 
 @keyframes App-logo-spin {
