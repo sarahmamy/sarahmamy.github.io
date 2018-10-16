@@ -38,36 +38,36 @@ class App extends Component {
           <h2 className='pt60'>
             Projects
           </h2>
-          <h3 className='pt24'>
+          <h3 className='pt36'>
             <a href='https://app.comet.co' target='_blank' rel='noopener noreferrer'>Comet</a>
           </h3>
-          <p className='pt12'>
+          <p className='pt18'>
             I currently work there.
           </p>
-          <p className='py12'>
+          <p className='pt6 pb18'>
             We’re building a dazzling marketplace to match Tech & Data freelancers with companies looking for talents.
           </p>
           <a href='https://app.comet.co'>
             <img className='w-full h120 h360-mm' alt='escapades' draggable={false} style={{objectFit: 'cover'}} src={comet} />
           </a>
-          <h3 className='pt24'>
+          <h3 className='pt36'>
             <a href='https://www.escapades.voyage' target='_blank' rel='noopener noreferrer'>Escapades</a>
           </h3>
-          <p className='pt12'>
+          <p className='pt18'>
             A story-telling hiking blog centered around trail maps and photos.
             With Benjamin TD, we designed and developed the website from scratch in one month during our spare time.
           </p>
-          <p className='py12'>
+          <p className='pt6 pb18'>
             I am pretty proud of the lamp animation{' '}
             <a href='https://www.escapades.voyage' target='_blank' rel='noopener noreferrer'>if you want to take a look</a>.
           </p>
           <a href='https://www.escapades.voyage'>
             <img className='w-full h120 h360-mm' alt='escapades' draggable={false} style={{objectFit: 'cover'}} src={escapades} />
           </a>
-          <h3 className='pt24'>
+          <h3 className='pt36'>
             <a href='https://www.geoschool.fr' target='_blank' rel='noopener noreferrer'>GéoSchool</a>
           </h3>
-          <p className='py12'>
+          <p className='py18'>
             We started building a geolocalized alumni platform in 2015.
             Since then, we launched in 8 engineering universities and gathered 3.5K+ users.
             Our design principles: user-centered, data-driven and fun-to-use. Access is reserved to members.
@@ -79,7 +79,7 @@ class App extends Component {
           <h2 className='pt60'>
             Hobbies
           </h2>
-          <p className='py12'>
+          <p className='py18'>
             I love going to art exhibits or watching movies.
             <br />
             When I am not at my desk, I am usually climbing or having a beer with friends.
@@ -87,8 +87,8 @@ class App extends Component {
             I welcome bribes in the form of{' '}
             <span><img draggable="false" className="h24 w24 emoji" alt="🍍" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/129/pineapple_1f34d.png" /></span>.
           </p>
-          <h3 className='pt24'>Cinema</h3>
-          <p className='py12'>
+          <h3 className='pt36'>Cinema</h3>
+          <p className='py18'>
             Here is a list of movies I love.
           </p>
           <div className='txt-ul'>
@@ -176,10 +176,10 @@ class App extends Component {
           <h2 className='pt60'>
             People I admire
           </h2>
-          <p className='py12'>
+          <p className='py18'>
             Be thankful.
           </p>
-          <div class='pt12'>
+          <div class='pt18'>
             <RoleModel
               name='Nick Saporito'
               comment='His design tutorials are the best I’ve ever followed.'
@@ -199,9 +199,11 @@ class App extends Component {
               imageUrl={shainblum}
             ></RoleModel>
           </div>
-          <a className='color-darken50 txt-em' href='mailto:mamysrh@gmail.com'>
-            <span className='sm'>Psst, feedback is welcome!</span>
-          </a>
+          <div className='pt30'>
+            <a className='color-darken50 txt-em' href='mailto:mamysrh@gmail.com'>
+              <span className='sm'>Psst, feedback is welcome!</span>
+            </a>
+          </div>
         </div>
       </div>
     );
