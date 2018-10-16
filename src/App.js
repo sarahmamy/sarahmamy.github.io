@@ -8,6 +8,7 @@ import linkedinIcon from './assets/linkedin.svg';
 import emailIcon from './assets/email.svg';
 import escapades from './assets/escapades-screenshot.png';
 import geoponts from './assets/geoponts-screenshot.png';
+import comet from './assets/comet-screenshot.png';
 import rebecca from './assets/img/rebecca.png';
 import shainblum from './assets/img/shainblum.png';
 import saporito from './assets/img/saporito.png';
@@ -37,6 +38,18 @@ class App extends Component {
           <h2 className='pt60'>
             Projects
           </h2>
+          <h3 className='pt24'>
+            <a href='https://app.comet.co' target='_blank' rel='noopener noreferrer'>Comet</a>
+          </h3>
+          <p className='pt12'>
+            I currently work there.
+          </p>
+          <p className='py12'>
+            We’re building a dazzling marketplace to match Tech & Data freelancers with companies looking for talents.
+          </p>
+          <a href='https://app.comet.co'>
+            <img className='w-full h120 h360-mm' alt='escapades' draggable={false} style={{objectFit: 'cover'}} src={comet} />
+          </a>
           <h3 className='pt24'>
             <a href='https://www.escapades.voyage' target='_blank' rel='noopener noreferrer'>Escapades</a>
           </h3>
@@ -72,7 +85,7 @@ class App extends Component {
             When I am not at my desk, I am usually climbing or having a beer with friends.
             <br />
             I welcome bribes in the form of{' '}
-            <span><img draggable="false" className="h24 w24 emoji" alt="🍍" src="https://apps.timwhitlock.info/static/images/emoji/emoji-apple/1f34d.png" /></span>.
+            <span><img draggable="false" className="h24 w24 emoji" alt="🍍" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/129/pineapple_1f34d.png" /></span>.
           </p>
           <h3 className='pt24'>Cinema</h3>
           <p className='py12'>
@@ -82,10 +95,18 @@ class App extends Component {
               <Cinema
                   title='Mommy'
                   director='Xavier Dolan'
-                  image1Url='https://apps.timwhitlock.info/static/images/emoji/emoji-apple/1f341.png'
+                  image1Url='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/129/maple-leaf_1f341.png'
                   image1Alt='maple'
                   image2Url='https://emojipedia-us.s3.amazonaws.com/thumbs/72/apple/114/family-woman-boy_1f469-200d-1f466.png'
                   image2Alt='mother and son'
+              ></Cinema>
+              <Cinema
+                  title='Au Poste !'
+                  director='Quentin Dupieux'
+                  image1Url='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/129/upside-down-face_1f643.png'
+                  image1Alt='🙃'
+                  image2Url='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/129/police-officer_1f46e.png'
+                  image2Alt='👮‍♂️'
               ></Cinema>
               <Cinema
                   title='There Will Be Blood'
@@ -161,13 +182,13 @@ class App extends Component {
           <div class='pt12'>
             <RoleModel
               name='Nick Saporito'
-              comment='His design tutorials are the best Ive ever followed.'
+              comment='His design tutorials are the best I’ve ever followed.'
               url='https://logosbynick.com/'
               imageUrl={saporito}
             ></RoleModel>
             <RoleModel
               name='Rebecca Manzoni'
-              comment='Her short capsules on music are fun, full of anecdotes and enlightening (in French).'
+              comment='Her short capsules on music - in French - are fun, full of anecdotes and enlightening.'
               url='https://www.franceinter.fr/emissions/pop-co'
               imageUrl={rebecca}
             ></RoleModel>
