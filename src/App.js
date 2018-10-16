@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='bg-white px36 py36 mx18 my18 px60-ml py60-ml mx36-ml my36-ml shadow-darken25-bold'>
-          <h1 className=''>
+          <h1>
             Sarah
             <br />Mamy
           </h1>
@@ -30,10 +30,10 @@ class App extends Component {
             I am a Product Manager based in Paris.
           </p>
           <div className='pt18'>
-            <a href='mailto:mamysrh@gmail.com'><img className='h24 w24 mr6' alt='email' draggable={false} src={emailIcon} /></a>
-            <a href='https://linkedin.com/in/sarahmamy'><img className='h24 w24 mr6' alt='linkedin' draggable={false} src={linkedinIcon} /></a>
-            <a href='https://github.com/sarahmamy'><img className='h24 w24 mr6' alt='github' draggable={false} src={githubIcon} /></a>
-            <a href='https://instagram.com/sarah_mamy'><img className='h24 w24 mr6' alt='instagram' draggable={false} src={instaIcon} /></a>
+            <a href='mailto:mamysrh@gmail.com'><img className='h24 w24 mr6 opacity75-on-hover' alt='email' draggable={false} src={emailIcon} /></a>
+            <a href='https://linkedin.com/in/sarahmamy'><img className='h24 w24 mr6 opacity75-on-hover' alt='linkedin' draggable={false} src={linkedinIcon} /></a>
+            <a href='https://github.com/sarahmamy'><img className='h24 w24 mr6 opacity75-on-hover' alt='github' draggable={false} src={githubIcon} /></a>
+            <a href='https://instagram.com/sarah_mamy'><img className='h24 w24 mr6 opacity75-on-hover' alt='instagram' draggable={false} src={instaIcon} /></a>
           </div>
           <h2 className='pt60'>
             Projects
@@ -179,7 +179,7 @@ class App extends Component {
           <p className='py18'>
             Be thankful.
           </p>
-          <div class='pt18'>
+          <div className='pt18'>
             <RoleModel
               name='Nick Saporito'
               comment='His design tutorials are the best I’ve ever followed.'
@@ -200,7 +200,7 @@ class App extends Component {
             ></RoleModel>
           </div>
           <div className='pt30'>
-            <a className='color-darken50 txt-em' href='mailto:mamysrh@gmail.com'>
+            <a className='color-gray txt-em' href='mailto:mamysrh@gmail.com'>
               <span className='sm'>Psst, feedback is welcome!</span>
             </a>
           </div>
