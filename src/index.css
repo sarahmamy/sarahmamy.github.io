@@ -40,6 +40,20 @@ a:hover {
   font-size: 14px;
 }
 
+.w520 {
+  width: 520px;
+  max-width: 520px;
+}
+
+.hmin72 {
+  min-height: 72px;
+}
+
+.hide-shadow {
+  overflow: hidden;
+  height: 12px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

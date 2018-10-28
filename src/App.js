@@ -179,7 +179,7 @@ class App extends Component {
           <p className='py18'>
             Be thankful.
           </p>
-          <div className='pt18'>
+          <div className='pt18 grid'>
             <RoleModel
               name='Nick Saporito'
               comment='His design tutorials are the best I’ve ever followed.'
@@ -198,11 +198,6 @@ class App extends Component {
               url='http://www.shainblumphoto.com/'
               imageUrl={shainblum}
             ></RoleModel>
-          </div>
-          <div className='pt30'>
-            <a className='color-gray txt-em' href='mailto:mamysrh@gmail.com'>
-              <span className='sm'>Psst, feedback is welcome!</span>
-            </a>
           </div>
         </div>
       </div>
