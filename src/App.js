@@ -9,11 +9,25 @@ import emailIcon from './assets/email.svg';
 import escapades from './assets/escapades-screenshot.png';
 import geoponts from './assets/geoponts-screenshot.png';
 import comet from './assets/comet-screenshot.png';
+import hanabi from './assets/hanabi-screenshot.png';
 import rebecca from './assets/img/rebecca.png';
 import shainblum from './assets/img/shainblum.png';
 import saporito from './assets/img/saporito.png';
 
-
+const Section = ({title, url, imgSrc, children}) => {
+  return (
+    <div>
+      <h3 className='pt36'>
+        <a href={url} target='_blank' rel='noopener noreferrer'>{title}</a>
+      </h3>
+      <div className='py18'>
+        {children}
+      </div>
+      <a href={url}>
+        <img className='w-full h120 h360-mm' alt={title} draggable={false} style={{objectFit: 'cover'}} src={imgSrc} />
+      </a>
+    </div>) 
+}
 
 class App extends Component {
   render() {
@@ -38,43 +52,35 @@ class App extends Component {
           <h2 className='pt60'>
             Projects
           </h2>
-          <h3 className='pt36'>
-            <a href='https://app.comet.co' target='_blank' rel='noopener noreferrer'>Comet</a>
-          </h3>
-          <p className='pt18'>
-            I currently work there.
-          </p>
-          <p className='pt6 pb18'>
-            We’re building a dazzling marketplace to match Tech & Data freelancers with companies looking for talents.
-          </p>
-          <a href='https://app.comet.co'>
-            <img className='w-full h120 h360-mm' alt='escapades' draggable={false} style={{objectFit: 'cover'}} src={comet} />
-          </a>
-          <h3 className='pt36'>
-            <a href='https://www.escapades.voyage' target='_blank' rel='noopener noreferrer'>Escapades</a>
-          </h3>
-          <p className='pt18'>
-            A story-telling hiking blog centered around trail maps and photos.
-            With Benjamin TD, we designed and developed the website from scratch in one month during our spare time.
-          </p>
-          <p className='pt6 pb18'>
-            I am pretty proud of the lamp animation{' '}
-            <a href='https://www.escapades.voyage' target='_blank' rel='noopener noreferrer'>if you want to take a look</a>.
-          </p>
-          <a href='https://www.escapades.voyage'>
-            <img className='w-full h120 h360-mm' alt='escapades' draggable={false} style={{objectFit: 'cover'}} src={escapades} />
-          </a>
-          <h3 className='pt36'>
-            <a href='https://www.geoschool.fr' target='_blank' rel='noopener noreferrer'>GéoSchool</a>
-          </h3>
-          <p className='py18'>
+
+          <Section title="Comet" url="https://app.comet.co" imgSrc={comet}>
+            <p>I currently work there.</p> 
+            <p className="pt6">
+              We’re building a dazzling marketplace to match Tech & Data freelancers with companies looking for talents.
+            </p>
+          </Section>
+
+          <Section title="Hanabi" url="https://hanabi.cards" imgSrc={hanabi}>
+            The online version of the popular collaborative card game <strong>Hanabi</strong>.
+          </Section>
+
+          <Section title="Escapades" url="https://www.escapades.voyage" imgSrc={escapades}>
+            <p>
+              A story-telling hiking blog centered around trail maps and photos.
+              With Benjamin TD, we designed and developed the website from scratch in one month during our spare time.
+            </p>
+            <p className='pt6'>
+              I am pretty proud of the lamp animation{' '}
+              <a href='https://www.escapades.voyage' target='_blank' rel='noopener noreferrer'>if you want to take a look</a>.
+            </p>
+          </Section>
+
+          <Section title="GéoSchool" url="https://www.geoschool.fr" imgSrc={geoponts}>
             We started building a geolocalized alumni platform in 2015.
             Since then, we launched in 8 engineering universities and gathered 3.5K+ users.
             Our design principles: user-centered, data-driven and fun-to-use. Access is reserved to members.
-          </p>
-          <a href='https://geoponts.enpc.fr'>
-            <img className='w-full h120 h360-mm' alt='geoponts' style={{objectFit: 'cover'}} src={geoponts} />
-          </a>
+          </Section>
+
 
           <h2 className='pt60'>
             Hobbies
