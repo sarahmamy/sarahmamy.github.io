@@ -9,6 +9,8 @@ import emailIcon from './assets/email.svg';
 import escapades from './assets/escapades-screenshot.png';
 import geoponts from './assets/geoponts-screenshot.png';
 import comet from './assets/comet-screenshot.png';
+import configames from './assets/configames-screenshot.png';
+import bigblue from './assets/bigblue-screenshot.png';
 import hanabi from './assets/hanabi-screenshot.png';
 import rebecca from './assets/img/rebecca.png';
 import shainblum from './assets/img/shainblum.png';
@@ -29,6 +31,11 @@ const Section = ({title, url, imgSrc, children}) => {
     </div>) 
 }
 
+const SocialIcons = ({href, alt, src}) => {
+  return (
+    <a href={href}><img className='h24 w24 mr6 opacity75-on-hover' alt={alt} draggable={false} src={src} /></a>
+)}
+
 class App extends Component {
   render() {
     return (
@@ -44,34 +51,47 @@ class App extends Component {
             I am a Product Manager based in Paris.
           </p>
           <div className='pt18'>
-            <a href='mailto:mamysrh@gmail.com'><img className='h24 w24 mr6 opacity75-on-hover' alt='email' draggable={false} src={emailIcon} /></a>
-            <a href='https://linkedin.com/in/sarahmamy'><img className='h24 w24 mr6 opacity75-on-hover' alt='linkedin' draggable={false} src={linkedinIcon} /></a>
-            <a href='https://github.com/sarahmamy'><img className='h24 w24 mr6 opacity75-on-hover' alt='github' draggable={false} src={githubIcon} /></a>
-            <a href='https://instagram.com/sarah_mamy'><img className='h24 w24 mr6 opacity75-on-hover' alt='instagram' draggable={false} src={instaIcon} /></a>
+            <SocialIcons href="mailto:mamysrh@gmail.com" alt="email" src={emailIcon} />
+            <SocialIcons href="https://linkedin.com/in/sarahmamy" alt="linkedin" src={linkedinIcon} />
+            <SocialIcons href="https://github.com/sarahmamy" alt="github" src={githubIcon} />
+            <SocialIcons href="https://instagram.com/sarah_mamy" alt="instagram" src={instaIcon} />
           </div>
           <h2 className='pt60'>
             Projects
           </h2>
 
-          <Section title="Comet" url="https://app.comet.co" imgSrc={comet}>
+          <Section title="Bigblue" url="https://bigblue.io" imgSrc={bigblue}>
             <p>I currently work there.</p> 
             <p className="pt6">
-              We’re building a dazzling marketplace to match Tech & Data freelancers with companies looking for talents.
+              We are helping small businesses handle their logistics, at affordable costs. Making logistics no longer complex but enjoyable.
             </p>
           </Section>
 
-          <Section title="Hanabi" url="https://hanabi.cards" imgSrc={hanabi}>
-            The online version of the popular collaborative card game <strong>Hanabi</strong>.
+          <Section title="Configames" url="https://configames.vercel.app" imgSrc={configames}>
+              A list of remote-friendly games playable with friends and family over a videoconference call.
+              <br />Wanted to help people connect and enjoy fun moments while being locked down.
           </Section>
 
-          <Section title="Escapades" url="https://www.escapades.voyage" imgSrc={escapades}>
+          <Section title="Hanabi" url="https://hanabi.cards" imgSrc={hanabi}>
+            The online version of the popular collaborative card game <strong>Hanabi</strong>. We have around 4K monthly users.
+            <br /> I co-developed the interface with my friend Bastien Formery, with additional help from Benjamin TD.
+          </Section>
+
+          <Section title="Comet" url="https://app.comet.co" imgSrc={comet}>
+            <p className="pt6">
+              Comet is a dazzling marketplace to match Tech & Data freelancers with companies looking for talents.
+              <br /> I joined the Product Team, and worked there for three years (2017 - 2020). Among my achievements, I kickstarted the freelancer interface, designed all the mission flow and interactions between the freelancer and client.
+            </p>
+          </Section>
+
+          <Section title="Escapades" url="https://escapades.bensarah.fr" imgSrc={escapades}>
             <p>
               A story-telling hiking blog centered around trail maps and photos.
               With Benjamin TD, we designed and developed the website from scratch in one month during our spare time.
             </p>
             <p className='pt6'>
               I am pretty proud of the lamp animation{' '}
-              <a href='https://www.escapades.voyage' target='_blank' rel='noopener noreferrer'>if you want to take a look</a>.
+              <a href='https://escapades.bensarah.fr' target='_blank' rel='noopener noreferrer'>if you want to take a look</a>.
             </p>
           </Section>
 
