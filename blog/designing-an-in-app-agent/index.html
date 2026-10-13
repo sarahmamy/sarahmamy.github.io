@@ -244,6 +244,43 @@
     .chip.round { border-radius: 1em; }
     .chip .new { background: #e9f1ff; color: var(--notion-blue); border-radius: .3em; padding: 0 .3em; font-size: .85em; }
 
+    .cards { display: flex; gap: .7em; margin-top: 1.2em; flex: none; }
+    .cards span { flex: 1; border: 1px solid #e3e3e3; border-radius: .6em; padding: .6em; display: flex; flex-direction: column; gap: .4em; background: #fff; }
+    .cards span i { display: block; height: 3.2em; border-radius: .4em; background: #f1f1f1; margin-bottom: .2em; }
+    .app[data-list="on"] .cards { visibility: hidden; }
+
+    /* context chip widget */
+    .ctxs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px; font-family: var(--ui); font-size: 12.5px; }
+    @media (max-width: 760px) { .ctxs { grid-template-columns: 1fr; gap: 30px; } }
+    .ctxcell { min-width: 0; display: flex; flex-direction: column; gap: 10px; --accent: var(--ink); }
+    .ctxcell.shopify { --accent: var(--shopify); } .ctxcell.notion { --accent: var(--notion); } .ctxcell.amplitude { --accent: var(--amplitude); }
+    .ctxcell .who { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; color: var(--ink); }
+    .ctxcell .who i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+    .ctxcell .composer { font-size: 12.5px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+    .ctxcell .composer .ph { color: #8a8a8e; }
+    .ctxcell.notion .composer .send { background: var(--notion-blue); }
+    .ctxcell.amplitude .composer.boxed.focus { border-color: var(--amplitude); box-shadow: 0 0 0 2px rgba(29,92,240,.15); }
+    .ctxcell .ctx { font-size: 12px; max-width: 100%; }
+    .ctx .x { color: #9a9a9e; margin-left: .2em; font-weight: 500; }
+    .ctx.quote { background: #fff; border-color: #e3e3e1; color: #303030; }
+    .ctx.quote b { font-weight: 600; color: #8a8a8e; font-size: .85em; letter-spacing: .02em; flex: none; }
+    .ctx.quote span { overflow: hidden; text-overflow: ellipsis; min-width: 0; font-style: italic; }
+    .docprev { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px 12px; min-height: 118px; }
+    .docprev .t { font-weight: 700; font-size: 15px; color: var(--ink); margin-bottom: 8px; letter-spacing: -.01em; }
+    .docprev .sk { height: 7px; margin: 7px 0; }
+    .docprev .line { font-size: 12px; color: #303030; line-height: 1.5; margin: 4px 0; cursor: pointer; display: inline; border-radius: 3px; padding: 1px 2px; transition: background .2s; }
+    .docprev .line.sel { background: #cfe3fb; }
+    .docprev .line:hover { background: #e9f1fb; }
+    .docprev .hint { font-size: 11px; color: var(--faint); margin-top: 8px; }
+    .ctxcell .seg { align-self: flex-start; }
+    .ctxcell .seg button { font-size: 12px; padding: 4px 10px; }
+    .ctxcell .note { font-size: 12.5px; }
+    .ctxcell .shell { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; min-height: 118px; display: flex; flex-direction: column; gap: 6px; justify-content: center; }
+    .ctxcell .shell .sk { height: 7px; margin: 0; }
+    .ctxcell .shell .t { font-weight: 700; font-size: 15px; color: var(--ink); letter-spacing: -.01em; margin-bottom: 4px; }
+    .ctxcell .shell .pill { display: inline-block; border-radius: 1em; padding: 1px 8px; background: #ffea8a; color: #4f3b00; font-size: 11px; margin-left: 6px; vertical-align: 2px; }
+    .ctxcell .shell svg { width: 100%; height: auto; }
+
     /* composers */
     .composer {
       display: flex; align-items: center; gap: .5em; background: #fff; border: 1px solid #e2e2e4; border-radius: 1.6em; padding: .5em .7em;
@@ -282,8 +319,8 @@
     .app:not([data-mode="none"]) .fab { opacity: 0; transform: scale(.6); pointer-events: none; }
     .av { width: 1.5em; height: 1.5em; flex: none; display: inline-grid; place-items: center; }
     .av svg, .av img { width: 100%; height: 100%; display: block; object-fit: contain; }
-    .av.notion-av { background: #fff; border-radius: 50%; border: 1px solid #e3e3e1; padding: 14%; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
-    .av.amp-av { background: var(--amplitude); border-radius: .3em; padding: 18%; }
+    .av.notion-av { background: #fff; border-radius: 50%; border: 1px solid #e3e3e1; padding: .22em; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+    .av.amp-av { background: var(--amplitude); border-radius: .3em; padding: .28em; }
 
     /* the agent panel */
     .panel {
@@ -408,8 +445,8 @@
     .entry.fab::after { top: -.5em; right: -.5em; }
     .entry.fab, .entry.dock { position: absolute; }
     .legend { list-style: none; margin-top: 12px; display: flex; flex-direction: column; gap: 4px; }
-    .legend li { font-size: 12.5px; color: var(--muted); display: flex; gap: 8px; align-items: baseline; padding: 4px 6px; border-radius: 6px; cursor: default; transition: background .2s, color .2s; }
-    .legend li i { flex: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 10px; font-weight: 700; display: grid; place-items: center; font-style: normal; transform: translateY(2px); }
+    .legend li { font-size: 12.5px; line-height: 1.6; color: var(--muted); display: flex; gap: 8px; align-items: flex-start; padding: 4px 6px; border-radius: 6px; cursor: default; transition: background .2s, color .2s; }
+    .legend li i { flex: none; width: 16px; height: 16px; margin-top: 2px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 10px; font-weight: 700; display: grid; place-items: center; font-style: normal; line-height: 1; }
     .legend li:hover, .legend li.on { background: #e9eaec; color: var(--ink); }
     .cell.shopify { --accent: var(--shopify); } .cell.notion { --accent: var(--notion); } .cell.amplitude { --accent: var(--amplitude); }
 
@@ -443,7 +480,7 @@
     .spec dd kbd { font: inherit; font-size: 11.5px; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; background: #fff; color: var(--ink); }
     .spec .pl { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #e3e3e5; background: #fff; border-radius: 999px; padding: 6px 12px 6px 8px; color: #8a8a8e; font-size: 13px; max-width: 100%; white-space: nowrap; overflow: hidden; }
     .spec .pl.boxed { border-radius: 8px; }
-    .spec .pl .av { width: 18px; height: 18px; }
+    .spec .pl .av { width: 18px; height: 18px; padding: 3px; }
     .spec .pl .caret { width: 1px; height: 13px; background: #333; animation: blink 1s steps(2) infinite; flex: none; }
     @keyframes blink { 50% { opacity: 0; } }
     .spec .agents { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 4px; }
@@ -549,7 +586,8 @@
 
   <div class="prose">
     <p>At Bigblue we're building an agent inside the app. The model turned out to be the easy part. The hard part was navigation. Where does it go in the navbar? Should it be a full page, or a panel you keep next to the order you're looking at? Can it be both? How do you open it from a page without losing that page? What do you call it, how do you list past conversations, do they deserve a URL, can you share one?</p>
-    <p>Rather than guess, I went looking at three products I use every day and admire for their design: Shopify, Notion and Amplitude. Big companies, strong product and design teams, and I genuinely have an account in each. What follows is what I found, as small mockups you can poke at rather than screenshots. Everything was observed in October 2026. These teams ship fast, so parts of this will age.</p>
+    <p>Rather than guess, I went looking at three products I use every day and admire for their design: Shopify, Notion and Amplitude. They're big companies with strong product and design teams, and I have a real account on each of them, so I could click around instead of relying on other people's screenshots. What follows is what I found, as small mockups you can poke at. Everything was observed in October 2026. These teams ship fast, so parts of this will age.</p>
+    <p class="note">A caveat before the mockups: they are deliberate simplifications of very complex apps. The real things have finer animations, more states and many more interactions than I show. I kept what matters for navigation and left the rest out, knowingly.</p>
     <div class="apps-key">
       <span><i style="background:var(--shopify)"></i>Shopify, Sidekick</span>
       <span><i style="background:var(--notion)"></i>Notion, Notion AI</span>
@@ -564,8 +602,15 @@
     <div class="stage" id="w1"></div>
   </div></div>
 
-  <!-- 2. modes -->
-  <h2 id="modes"><span class="n">02</span>Panel or full page? Both.</h2>
+  <!-- 2. home -->
+  <h2 id="home"><span class="n">02</span>The agent's home</h2>
+  <div class="prose"><p>Open the agent from nowhere in particular and you land somewhere. Two of the three made that somewhere the product's own home page.</p></div>
+  <div class="widget"><div class="widget-inner">
+    <div class="stage" id="wh"></div>
+  </div></div>
+
+  <!-- 3. modes -->
+  <h2 id="modes"><span class="n">03</span>Panel or full page? Both.</h2>
   <div class="prose"><p>All three keep the agent next to your work, and all three can blow it up to a full page. Switch the mode.</p></div>
   <div class="widget"><div class="widget-inner">
     <div class="controls">
@@ -579,22 +624,26 @@
   </div></div>
 
   <!-- 3. from the page -->
-  <h2 id="context"><span class="n">03</span>Opening it from the work</h2>
+  <h2 id="context"><span class="n">04</span>Opening it from the work</h2>
   <div class="prose"><p>The agent should know what you're looking at. The three apps say it differently. Click the triggers.</p></div>
   <div class="widget"><div class="widget-inner">
     <div class="controls"><button class="replay" id="w3replay">Replay</button><span>Click the docked composer, the floating button, or “Analyze”.</span></div>
     <div class="stage" id="w3"></div>
   </div></div>
+  <div class="prose" style="margin-top:36px"><p>I didn't have a word for the little page hint that appears in the input. Call it the context chip. Shopify shows none, Amplitude attaches the chart, and Notion goes one step further: select something on the page and the chip becomes that selection.</p></div>
+  <div class="widget narrow"><div class="widget-inner">
+    <div class="ctxs" id="wc"></div>
+  </div></div>
 
-  <!-- 4. name -->
-  <h2 id="name"><span class="n">04</span>A name and a face</h2>
+  <!-- 5. name -->
+  <h2 id="name"><span class="n">05</span>A name and a face</h2>
   <div class="prose"><p>Two of them have a character. One of them is just called Chat.</p></div>
   <div class="widget"><div class="widget-inner">
     <div class="spec-grid" id="w4"></div>
   </div></div>
 
   <!-- 5. conversations -->
-  <h2 id="list"><span class="n">05</span>The list of conversations</h2>
+  <h2 id="list"><span class="n">06</span>The list of conversations</h2>
   <div class="prose"><p>Grouped by recency everywhere. The differences are where the list lives and what a row can do. Click the triggers to see where each list is, then hover a row and open its menu.</p></div>
   <div class="widget"><div class="widget-inner">
     <div class="controls"><button class="replay" id="w5replay">Replay</button><span>Click “Recents”, the Chat tab or the panel title, and “Chat &amp; Agents”.</span></div>
@@ -602,21 +651,21 @@
   </div></div>
 
   <!-- 6. urls -->
-  <h2 id="urls"><span class="n">06</span>URLs</h2>
+  <h2 id="urls"><span class="n">07</span>URLs</h2>
   <div class="prose"><p>Click around and watch the address bar.</p></div>
   <div class="widget narrow"><div class="widget-inner">
     <div class="urls" id="w6"></div>
   </div></div>
 
   <!-- 7. sharing & the rest -->
-  <h2 id="sharing"><span class="n">07</span>Sharing, and the rest</h2>
+  <h2 id="sharing"><span class="n">08</span>Sharing, and the rest</h2>
   <div class="prose"><p>The smaller patterns, in one grid. Hover a cell for the detail.</p><p class="note">● yes &nbsp;·&nbsp; ◐ partly &nbsp;·&nbsp; ○ no</p></div>
   <div class="widget narrow"><div class="widget-inner matrix-wrap">
     <table class="matrix" id="w7"></table>
   </div></div>
 
   <!-- 8. takeaways -->
-  <h2 id="takeaways"><span class="n">08</span>What I'm keeping</h2>
+  <h2 id="takeaways"><span class="n">09</span>What I'm keeping</h2>
   <ol class="take">
     <li>Don't file the agent under the nav. Put it where the work is: a composer or a button on every page, and a line at the bottom of search.</li>
     <li>Ship the panel and the full page from day one, with a toggle in the panel header. Let the panel survive navigation.</li>
@@ -626,7 +675,7 @@
     <li>Copy link is the floor. Permissions like any other document, and a share to Slack, are the ceiling.</li>
   </ol>
 
-  <h2 id="reading"><span class="n">09</span>Further reading</h2>
+  <h2 id="reading"><span class="n">10</span>Further reading</h2>
   <div class="prose">
     <p>Pieces I liked on the subject, and that this post leans on. I'm sure I've missed some great ones. If you know one, I'd genuinely love to read it: <a href="mailto:mamysrh@gmail.com?subject=An%20article%20on%20in-app%20agents">send me the link</a>.</p>
   </div>
@@ -733,7 +782,8 @@
         <div class="foot">${av('shopify')}<span class="sp"></span><span class="recents trig" data-role="recents">${svg(I.history, '1em')} Recents</span><span class="sep"></span><span class="ico">${I.plus}</span><span class="ico">${I.voice}</span></div>
       </div>
       <div class="chips"><span class="chip round">Fulfill orders <b style="font-weight:500;color:#6d6d6d">50+</b></span><span class="chip round">Capture payments <b style="font-weight:500;color:#6d6d6d">27</b></span></div>
-    </div>`;
+    </div>
+    <div class="cards"><span><i></i>${sk('70%')}${sk('90%')}</span><span><i></i>${sk('60%')}${sk('85%')}</span><span><i></i>${sk('75%')}${sk('80%')}</span></div>`;
   const docPage = `
     <div class="doc">
       <i class="emoji"></i>
@@ -1072,6 +1122,55 @@
     });
   })();
 
+  /* ======================= 02 · the agent's home ======================= */
+  (function () {
+    const w = $('#wh');
+    w.innerHTML = `
+      <div class="cell shopify">${frameShopify({ page: 'home' })}
+        ${cap('shopify', 'Shopify', 'The admin\'s home page is Sidekick\'s home. A greeting, the composer, two task chips computed from the store (“Fulfill orders 50+”), and “Recents” tucked into the composer.')}
+      </div>
+      <div class="cell notion">${frameNotion({ mode: 'full', tab: 'chat' })}
+        ${cap('notion', 'Notion', 'A page of its own at /ai, reached from “New chat ⌘O”. A greeting, the composer, and four modes underneath: slides, spreadsheets, research, visualize. No page chip here.')}
+      </div>
+      <div class="cell amplitude">${frameAmplitude({ agents: true, area: 'agents', cur: 'agents' })}
+        ${cap('amplitude', 'Amplitude', 'Chat & Agents is an area of its own: the main nav collapses to a rail, a second sidebar holds history and custom agents, and the home offers agents to adopt. The product home is also the composer, with a “Switch to classic home” link.')}
+      </div>`;
+  })();
+
+  /* ======================= 04b · the context chip ======================= */
+  (function () {
+    const w = $('#wc');
+    w.innerHTML = `
+      <div class="ctxcell shopify">
+        <div class="who"><i></i>Shopify</div>
+        <div class="shell"><div class="t">#1728 <span class="pill">Unfulfilled</span></div>${sk('85%')}${sk('60%')}${sk('70%')}</div>
+        <div class="composer">${av('shopify')}<span class="ph">Work with Sidekick</span><span class="ico">${I.plus}</span><span class="ico">${I.voice}</span></div>
+        <p class="note">No chip. Sidekick still knows the page: ask “what's in this order?” and it answers about #1728. You just can't see or remove that context.</p>
+      </div>
+      <div class="ctxcell notion">
+        <div class="who"><i></i>Notion</div>
+        <div class="docprev"><div class="t">Launch checklist</div>${sk('88%')}<span class="line" data-role="selline">Choose the roles each person needs for their work.</span>${sk('76%')}${sk('52%')}<div class="hint">Click the sentence to select it.</div></div>
+        <div class="composer boxed focus"><span class="ctx" data-role="pagechip"><i class="sq"></i>Launch checklist<span class="x">×</span></span><span class="ctx quote" data-role="selchip" style="display:none"><b>AI</b><span>“Choose the roles each person needs for their work.”</span><span class="x">×</span></span><span class="ph">Do anything with AI…</span><div class="foot"><span class="ico">${I.plus}</span><span class="ico">${I.sliders}</span><span class="sp"></span><span style="color:#303030">Auto</span><span class="ico">${I.mic}</span><span class="send">${I.arrow}</span></div></div>
+        <div class="seg" data-role="selseg"><button aria-pressed="true" data-v="page">Whole page</button><button aria-pressed="false" data-v="sel">A selection</button></div>
+        <p class="note">The page is a chip you can remove. Select a sentence or a block and the chip becomes that selection, so the agent works on exactly what you're looking at.</p>
+      </div>
+      <div class="ctxcell amplitude">
+        <div class="who"><i></i>Amplitude</div>
+        <div class="shell"><div class="t">Daily Active Users</div><svg viewBox="0 0 200 50" preserveAspectRatio="none"><path d="M0 44 L0 22 Q6 8 14 10 L36 9 Q46 7 50 36 L60 40 Q70 7 84 9 L106 7 Q116 7 120 37 L130 41 Q140 8 154 9 L176 8 Q186 7 190 34 L200 38 L200 50 L0 50 Z" fill="rgba(29,92,240,.12)"/><path d="M0 22 Q6 8 14 10 L36 9 Q46 7 50 36 L60 40 Q70 7 84 9 L106 7 Q116 7 120 37 L130 41 Q140 8 154 9 L176 8 Q186 7 190 34 L200 38" fill="none" stroke="#1d5cf0" stroke-width="1.6"/></svg></div>
+        <div class="composer boxed focus"><span class="ctx"><i class="sq" style="background:#bcd0fb"></i>Daily Active Users<span class="x">×</span></span><span class="ph">Analyze, build, or type / for commands</span><div class="foot"><span class="ico">${I.plus}</span><span class="sp"></span><span class="ico">${I.mic}</span></div></div>
+        <p class="note">The chart is a chip, removable. Open the panel from a dashboard and the dashboard takes its place. The thread remembers it: “Ask a follow up…” keeps the chip.</p>
+      </div>`;
+    const line = $('[data-role="selline"]', w), pagechip = $('[data-role="pagechip"]', w), selchip = $('[data-role="selchip"]', w), seg = $('[data-role="selseg"]', w);
+    const set = v => {
+      line.classList.toggle('sel', v === 'sel');
+      pagechip.style.display = v === 'sel' ? 'none' : '';
+      selchip.style.display = v === 'sel' ? '' : 'none';
+      $$('button', seg).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === v)));
+    };
+    $$('button', seg).forEach(b => b.addEventListener('click', () => set(b.dataset.v)));
+    line.addEventListener('click', () => set(line.classList.contains('sel') ? 'page' : 'sel'));
+  })();
+
   /* ======================= 02 · modes ======================= */
   (function () {
     const w = $('#w2');
@@ -1365,7 +1464,7 @@
       ['Unread state', ['no', ''], ['yes', 'Blue dot in the list, badge on the Chat tab, “Mark as unread” in the menu'], ['no', '']],
       ['Rename', ['yes', ''], ['yes', ''], ['yes', '']],
       ['Delete or archive', ['yes', 'Delete'], ['yes', 'Delete'], ['half', 'Archive, not delete']],
-      ['Current page as context', ['half', 'Implicit: “this order” works, but nothing shows it'], ['yes', 'A removable chip in the composer'], ['yes', 'A removable chip in the composer']],
+      ['Current page as context', ['half', 'Implicit: “this order” works, but nothing shows it'], ['yes', 'A removable chip in the composer, and the selection takes its place if you made one'], ['yes', 'A removable chip in the composer']],
       ['Suggested prompts', ['yes', 'Task chips on the home composer: “Fulfill orders 50+”, “Capture payments 27”'], ['yes', 'Four page actions: summarize, diagram, slides, insights'], ['yes', 'Three questions about the chart, then follow-up chips after each answer']],
       ['Steps shown while working', ['yes', '“Working on your store…” then a checklist: Searched your shop, Checked the order'], ['yes', 'A collapsed “2 steps ›” line above the answer'], ['yes', 'Inline, with the chart it built']],
       ['Artifacts', ['half', 'Action cards: “View order #1728 ›”'], ['yes', 'An “Artifacts” panel listing the pages the thread edited'], ['yes', 'Charts render in the thread; the list row carries their icon']],
