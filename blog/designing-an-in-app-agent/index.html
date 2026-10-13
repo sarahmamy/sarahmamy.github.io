@@ -972,12 +972,14 @@
           <div class="top-it">Agents</div>
           <div class="it">${svg(I.edit, '1em')} New Chat</div>
           <div class="it">Custom Agents</div>
-          <div class="h">Previous 30 Days</div>
-          <div class="it cur"><i class="sq"></i>Parcel tracking page referrer</div>
-          <div class="it"><i class="sq"></i>Return portal traffic</div>
-          <div class="it"><i class="sq"></i>Returns FAQ views</div>
-          <div class="h">Older</div>
-          <div class="it"><i class="dot" style="width:.5em;height:.5em"></i>Sideview URLs</div>
+          <div class="h">Today</div>
+          <div class="it"><i class="sq"></i>Tracking page views by device</div>
+          <div class="it cur"><i class="sq"></i>Where tracking traffic comes from</div>
+          <div class="h">Yesterday</div>
+          <div class="it"><i class="sq"></i>Returns FAQ, top articles</div>
+          <div class="it"><i class="sq"></i>Weekly active merchants</div>
+          <div class="h">Previous 7 Days</div>
+          <div class="it"><i class="sq"></i>Delivery promise widget adoption</div>
         </div>
         <div style="flex:1;display:flex;flex-direction:column;min-width:0">
           <div class="p-head"><span class="t-crumb">Buyer Tracking Page / <b>Parcel tracking page referrer</b></span><span class="t-sp"></span><span class="p-ico">${I.panel}</span><span class="p-ico">${I.link}</span><span class="p-ico">${I.slack}</span></div>
@@ -1055,12 +1057,15 @@
         <div class="it"><i class="ic"></i><span>Custom Agents</span></div>
         <div class="h">My Recent Agents</div>
         <div class="new-agent">+</div>
-        <div class="h">Previous 30 Days</div>
-        <div class="it">${I.dash}<span class="nowrap">Parcel tracking page referrer</span></div>
-        <div class="it">${I.chart}<span class="nowrap">Return portal button drives…</span></div>
-        <div class="it">${I.chart}<span class="nowrap">Returns FAQ article views</span></div>
-        <div class="h">Older</div>
-        <div class="it"><i class="dot" style="width:.5em;height:.5em"></i><span class="nowrap">Sideview Visited URLs</span></div>
+        <div class="h">Today</div>
+        <div class="it">${I.chart}<span class="nowrap">Tracking page views by device</span></div>
+        <div class="it">${I.chart}<span class="nowrap">Return portal conversion</span></div>
+        <div class="h">Yesterday</div>
+        <div class="it">${I.dash}<span class="nowrap">Where tracking traffic comes from</span></div>
+        <div class="it">${I.chart}<span class="nowrap">Returns FAQ, top articles</span></div>
+        <div class="h">Previous 7 Days</div>
+        <div class="it">${I.chart}<span class="nowrap">Weekly active merchants trend</span></div>
+        <div class="it">${I.dash}<span class="nowrap">Delivery promise widget adoption</span></div>
       </div>` : ''}
       <div class="main">
         <div class="content">
@@ -1347,13 +1352,21 @@
       </div>`;
     const amplitude = `
       <div class="list" data-app="amplitude">
+        <div class="grp">Today</div>
+        ${li({ icon: I.chart, t: 'Tracking page views by device, last 7 days', age: 'Oct 13', acts: btn(I.vdots, 'menu') })}
+        ${li({ icon: I.chart, t: 'Return portal conversion after the new CTA', age: 'Oct 13', acts: btn(I.vdots, 'menu') })}
+        <div class="grp">Yesterday</div>
+        ${li({ icon: I.dash, t: 'Where parcel tracking traffic comes from', age: 'Oct 12', acts: btn(I.vdots, 'menu') })}
+        ${li({ icon: I.chart, t: 'Returns FAQ, top articles this month', age: 'Oct 12', acts: btn(I.vdots, 'menu') })}
+        <div class="grp">Previous 7 days</div>
+        ${li({ icon: I.chart, t: 'Weekly active merchants trend', age: 'Oct 10', acts: btn(I.vdots, 'menu') })}
+        ${li({ icon: I.dash, t: 'Delivery promise widget adoption', age: 'Oct 9', acts: btn(I.vdots, 'menu') })}
+        ${li({ icon: I.chart, t: 'Drop-off in the returns funnel', age: 'Oct 7', acts: btn(I.vdots, 'menu') })}
         <div class="grp">Previous 30 days</div>
         ${li({ icon: I.dash, t: 'Parcel tracking page referrer breakdown', age: 'Sep 30', acts: btn(I.vdots, 'menu') })}
         ${li({ icon: I.chart, t: 'Return portal button drives minimal traffic', age: 'Sep 30', acts: btn(I.vdots, 'menu') })}
-        ${li({ icon: I.chart, t: 'Returns FAQ article views last 30 days', age: 'Sep 29', acts: btn(I.vdots, 'menu') })}
         <div class="grp">Older</div>
         ${li({ icon: '<svg viewBox="0 0 16 16" fill="#c9c9cc"><circle cx="8" cy="8" r="2.5"/></svg>', t: 'Sideview visited URLs last 30 days', age: 'Jun 2', acts: btn(I.vdots, 'menu') })}
-        ${li({ icon: I.dash, t: 'Sideview extension usage and behavior', age: 'May 27', acts: btn(I.vdots, 'menu') })}
       </div>`;
     w.innerHTML = `
       <div class="cell shopify">${frameShopify({ page: 'home' })}<p class="where">Behind a “Recents” button on the home composer, as a full page. There is no list in the panel.</p>${shopify}${cap('shopify', 'Shopify', 'Relative ages, hover for a menu. Rename or delete, nothing else.')}</div>
