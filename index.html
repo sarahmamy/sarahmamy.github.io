@@ -1,1 +1,144 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><link href="/assembly.css" rel="stylesheet"><script async defer="defer" src="/assembly.js"></script><link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"><title>Sarah Mamy</title><link href="/static/css/main.eb73c254.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/static/js/main.847c234f.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sarah Mamy</title>
+  <meta name="description" content="Sarah Mamy — Lead Product Manager in Paris, currently at Bigblue.">
+  <meta name="theme-color" content="#f1f3f4">
+  <link rel="icon" href="/favicon.png">
+  <style>
+    @font-face {
+      font-family: "Glacial Indifference";
+      src: url("/font/GlacialIndifference-Regular.otf") format("opentype");
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Glacial Indifference";
+      src: url("/font/GlacialIndifference-Bold.otf") format("opentype");
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #f1f3f4;
+      --ink: #1c1c1e;
+      --muted: #6b6b6f;
+      --line: #d4d4d1;
+      --gradient: linear-gradient(90deg, #2a6a8e, #3b92a1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 96px 24px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: "Glacial Indifference", sans-serif;
+      font-weight: 700;
+      font-size: clamp(40px, 9vw, 64px);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      margin-bottom: 32px;
+    }
+
+    p + p { margin-top: 14px; }
+
+    a {
+      position: relative;
+      color: inherit;
+      text-decoration: none;
+    }
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -3px;
+      height: 2px;
+      background: var(--line);
+      transition: opacity 0.2s;
+    }
+    a:hover {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    a:hover::after { background: var(--gradient); }
+
+    nav {
+      margin-top: 44px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      font-size: 14px;
+    }
+    nav a { color: var(--muted); }
+    nav a::after { display: none; }
+
+    @media (max-width: 480px) {
+      body { font-size: 15px; }
+      main { padding: 64px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Lead Product Manager · Paris</p>
+    <h1>Sarah<br>Mamy</h1>
+
+    <p>
+      Hi, I'm Sarah. I build products.
+    </p>
+    <p>
+      Today I'm Lead Product Manager at <a href="https://www.bigblue.co/" target="_blank" rel="noopener">Bigblue</a>,
+      where I look after the customer experience and the core platform our merchants run
+      their logistics on. Before that, I trained as an engineer at École des Ponts,
+      co-founded a startup right out of school, and spent three years shaping the product at Comet.
+    </p>
+    <p>
+      On the side, I'm building <a href="https://www.chronotrains.com" target="_blank" rel="noopener">Chronotrains</a>
+      with my husband, a map of how far you can travel by train in a few hours. I also
+      co-created <a href="https://hanabi.cards" target="_blank" rel="noopener">Hanabi</a>, an online
+      card game a few thousand people play every month.
+    </p>
+
+    <nav>
+      <a href="mailto:mamysrh@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/sarahmamy" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/sarahmamy" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://instagram.com/sarah_mamy" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </main>
+</body>
+</html>
